@@ -31,5 +31,6 @@ class Turn
         player2
       end
     end
+   # else self.type
   end
-end
+endS

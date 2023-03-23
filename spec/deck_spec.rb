@@ -54,4 +54,6 @@ RSpec.describe Deck do
   deck.add_card(card5) 
   expect(deck.cards).to eq([card1, card2, card3, card4, card5])
 end
+
+  it "can have a winner"
 end

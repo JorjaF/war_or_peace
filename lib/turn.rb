@@ -23,14 +23,24 @@ class Turn
         player1
       else 
         player2
-    end
+      end
     elsif self.type == :war
       if player1.deck.rank_of_card_at(2) > player2.deck.rank_of_card_at(2)
         player1
       else 
         player2
       end
+    else 
+      if player1.deck.rank_of_card_at(0) == player2.deck.rank_of_card_at(0) &&
+          player1.deck.rank_of_card_at(2) == player2.deck.rank_of_card_at(2)
+        "NO WINNER!!!"
+      end
     end
-   # else self.type
   end
-endS
+
+  def pile_cards
+    if self.type == :basic
+        player1.cards.shift && player2.cards.shift
+    end
+  end
+end
